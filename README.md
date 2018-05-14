@@ -88,9 +88,9 @@ More details coming soon.
 
 This PoC extends the MIT licensed Angular Elements chat widget by [@beeman_nl](https://twitter.com/beeman_nl)
 
-Many changes and improvements were made under the hood to meet the architectural objectives of this PoC as far as the project structure, NgModule imports and the deployment of web components. In addition, some enhancements were made interactive and responsive behaviors, and AI was added for a more useful interaction. 
+Many changes and improvements were made under the hood to meet the architectural objectives of this PoC as far as the project structure, NgModule imports and the deployment of web components. In addition, some enhancements were made to We Component interaction and the site's responsive behavior. Finally, AI was added for a more useful/interesting interaction. 
 
-This PoC also extends OpenAI's Sentiment Neuron demo. It adds a RESTful server via Flask. 
+This PoC extends OpenAI's Sentiment Neuron demo. It adds a RESTful server via Flask. 
 
 # References 
 
