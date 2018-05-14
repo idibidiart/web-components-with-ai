@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Web Components Demo with Angular Elements & OpenAI's Sentiment Neuron</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <style>
+    @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+    body, html {
+      margin: 0;
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden
+    }
+    body {
+      font-family: 'Open Sans', sans-serif
+    }
+    .container {
+      padding: 20px;
+    }
+    #logo {
+      width: 100px;
+      margin: 10px;
+      float: left;
+    }
+    a {
+      color: #1976d2;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+<!-- 
+  IMPORTANT: 
+  
+  This index-elements.html is copied to the dist/elements/index.html
+
+  Do not load directly.
+
+  This is the Angular Elements (Web Components) demo. 
+
+  For the "Angular app" demo see dist/chat-widget/index.html
+  
+-->  
+<div class="container">
+  <img id="logo" src="./angular-elements-logo.png" alt="Angular Elements Logo">
+  <h2>
+    This Widget is made with Angular Elements & OpenAI's Sentiment Neuron!
+  </h2>
+  <!-- 
+    Note: functionally dependent but structurally separate 
+    Custom Elements like chat-config and chat-widget are defined 
+    and deployed jointly in one script (chat-widget.js) with one set 
+    of dependencies (no duplication)
+    
+    The CEs allow separate placement in the DOM tree and  
+    communication between the can happen via their DOM properties and/or 
+    Setters/Getters (which can call this.method inside the Angular 
+    component, which is how methods are currently invoked, until 
+    user-defined class methods are exposed by Angular Elements)
+
+    The point is we can avoid deploy such functionally dependent web 
+    components separately and avoid duplicating dependencies while making 
+    sure we can't load one but not the other. 
+
+    See src/app/element.module.ts
+  -->
+  <chat-config id="config"></chat-config>
+</div>
+<chat-widget id="widget"></chat-widget>
+
+<!-- Remove this when MS Edge supports Custom Elements -->
+<script src="./native-shim.js"></script>
+<script src="./custom-elements.min.js"></script>
+
+<!-- Remove this when Angular supports change detection without ZoneJS 
+     Do not import zone.js in Angular Elements polyfill file as 
+     it will load once with each Angular-Elements-based Custom Element. 
+     
+     Instead, use this script tag to load it only once for all Angular-Elements-based 
+     Web Components. 
+
+     If you're using the Web Components with an Angular app (not AngularJS) 
+     you should not include zone.js here as it will already be included by the
+     Angular app.   
+-->
+<script src="./zone.js"></script>
+
+<script src="./chat-widget.js"></script>
+<script>
+  const config = document.getElementById('config')
+  const widget = document.getElementById('widget')
+  
+  // Custom Elements are DOM elements
+  // DOM Events and CustomEvents may be emitted from anywhere in
+  // the Angular generated DOM tree underlying a Custom Element. 
+  // Ex: 'themeChange', 'click', etc  
+  config.addEventListener('themeChange', (evt) => {
+    widget.theme = evt.detail
+    // Until Angular 7 or 6.x, user methods on Custom Elements are not
+    // supported as a feature, so we're using inputs and setters
+    // to invoke our methods
+    //
+    // change this when feature is available
+    widget._focus = {}
+  })
+
+  widget.addEventListener('click', (evt) => {
+    // Until Angular 7 or 6.x, user methods on Custom Elements are not
+    // supported as a feature, so we're using inputs and setters
+    // to invoke our methods
+    //
+    // change this when feature is available
+    widget._focus = {}
+  })
+</script>
+</body>
+</html>
