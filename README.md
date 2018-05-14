@@ -2,7 +2,6 @@
 
 ## Show and Tell
 
-[Web Components with Angular Elements and OpenAI's Sentiment Neuron](https://www.youtube.com/watch?v=ZssAz23SVvo)
 [![Web Components](https://img.youtube.com/vi/ZssAz23SVvo/0.jpg)](https://www.youtube.com/watch?v=ZssAz23SVvo)
 
 ## Web Components Architecture Objectives (met by this PoC) 
