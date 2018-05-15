@@ -56,7 +56,7 @@ The predictive accuracy of the Sentiment Neuron can be seen below with the two o
 
 The most interesting thing about this Deep Learning approach is that the network was trained to generate Reviews (unsupervised, using mLSTM RNN) by predicting the character and then turned into a sentiment classifer using labeled data and L1 Regularization. This hints at a basic relationship between sentence formation patterns and sentiment that the Sentiment Nueron (a single neuron in the network) is able to capture. This basic relationship should be of further interest to those who study formal theories of language. 
 
-Having said that, the Sentiment Neuron seems to be oblicious to sarcasm. This may mean that the supervised data set was lacking sufficient examples of sarcastic reviews, or it could mean that sarcasm is an elusive quality, one that escapes generalization and is very specific to external cultural context. Nevertheless, I believe that this is interesting work that is worth bringing the attention of a wider audience.
+Having said that, the Sentiment Neuron seems to be oblivious to sarcasm. This may mean that the supervised data set was lacking sufficient examples of sarcastic reviews, or it could mean that sarcasm is an elusive quality, one that escapes generalization and is very specific to external cultural context. Nevertheless, I believe that this is interesting work that is worth bringing the attention of a wider audience.
 
 ## Development
 
