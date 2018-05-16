@@ -1,4 +1,4 @@
-import { Component, ElementRef, HostListener, Input, OnInit, ViewChild } from '@angular/core'
+import { Component, ElementRef, HostListener, Input, OnInit, ViewChild, ViewEncapsulation } from '@angular/core'
 import { Subject } from 'rxjs'
 import { fadeIn, fadeInOut } from '../animations'
 import { HttpClient } from '@angular/common/http'
@@ -10,6 +10,7 @@ const rand = max => Math.floor(Math.random() * max)
   templateUrl: './chat-widget.component.html',
   styleUrls: ['./chat-widget.component.css'],
   animations: [fadeInOut, fadeIn],
+  encapsulation: ViewEncapsulation.Native
 })
 
 export class ChatWidgetComponent implements OnInit {

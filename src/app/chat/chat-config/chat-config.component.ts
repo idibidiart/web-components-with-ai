@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core'
+import { Component, EventEmitter, Input, Output, ViewEncapsulation } from '@angular/core'
 
 @Component({
   selector: 'chat-config',
@@ -29,6 +29,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core'
       border: 1px solid #333;
     }
   `],
+  encapsulation: ViewEncapsulation.Native
 })
 export class ChatConfigComponent {
   @Input() public theme: string
