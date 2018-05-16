@@ -24,7 +24,7 @@
 
 9. Styles declared for the Angular component underlying the given Web Component and the styles declared for its child components are encapsulated by the Shadow DOM. 
 
-10. All child Angular components within each Angular Component underlying a Web Component are in the Shadow DOM and are not selectable from the DOM. 
+10. All child Angular components within each Angular component underlying a Web Component are in the Shadow DOM and are not selectable from the DOM. 
 
 Please see src/index-elements.html for how the produced Web Components are deployed and used, and how they communicate.
 
