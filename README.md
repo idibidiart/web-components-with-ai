@@ -6,7 +6,7 @@
 
 ## Web Components Architecture Objectives (met by this PoC) 
 
-1. Build Web Components with sufficiently complex structure and interactions (between and within) using Angular 6 and bootstrap them as a Custom Elements using Angular Elements.
+1. Build Web Components with sufficiently complex structure and interactions using Angular 6 and bootstrap them as a Custom Elements using Angular Elements.
 
 2. Deploy Web Components that are functionally dependent, but structurally separate (in the DOM tree) using one script and only one set of dependencies (benefits: no duplication and no chance of deploying one but not the other.)
 
