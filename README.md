@@ -22,6 +22,10 @@
 
 8. Angular apps (AngularJS and Angular 2 thru N), React apps, Ember apps and any app (incl. vanilla JS and jQuery/Dojo apps) may use the said Web Components without any limitation.
 
+9. Styles declared for HTML the Angular component underlying the given Web Component and the styles declared for its child Angular components are encapsulated in the Shadow Root. 
+
+10. All child Angular components within each Angular Component underlying a Web Component are in the Shadow Root and are not selectable from the DOM.   
+
 Please see src/index-elements.html for how the produced Web Components are deployed and used, and how they communicate.
 
 ## Angular Elements Project Structure
@@ -90,6 +94,7 @@ This PoC extends the MIT licensed Angular Elements chat widget by [@beeman_nl](h
 
 This differs in the following ways:
 
+- Added Shadow DOM encapsulation (for styles and DOM selection)
 - NgModule imports were de-duplicated across the module dependency tree (Angular deduplicates dependencies but it is confusing to have duplicate imports at different levels of the dependency tree.) 
 - deployment of web components was modified so that multiple web components made with Angular Elements could be loaded without conflict or redundant dependencies. 
 - Some enhancements were made to the interaction between the Web Components 
