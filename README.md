@@ -50,7 +50,7 @@ See comments inside the file regarding deployment choices made
 
 This Web Components PoC uses OpenAI's Sentiment Neuron, a Deep Learning, "Multiplicative LSTM"-based RNN Model that was initially trained to generate product reviews using unsupervised data (a set of 82M Amazon reviews) then turned into a sentiment classifier using supervised data* and L1 Regularization, which according to the researchers led to the discovery of a singular neuron in the network that had 92% accuracy in estimating the sentiment of product reviews.**
 
-*100X smaller labeled set than in systems of similar performance, making this approach much more practical than existing approaches.
+*30-100X smaller labeled set than in systems of similar performance, making this approach much more practical than existing approaches.
 
 **based on the Stanford Sentiment Treebank: 91.8% accuracy versus the previous best of 90.2%.
 
