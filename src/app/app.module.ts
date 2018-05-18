@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core'
 
-import { ElementModule } from './element.module'
+import { ChatModule } from './chat/chat.module'
 import { AppComponent } from './app.component'
 
 @NgModule({
-  imports: [ElementModule],
+  imports: [ChatModule],
   declarations: [AppComponent],
   bootstrap: [AppComponent],
 })

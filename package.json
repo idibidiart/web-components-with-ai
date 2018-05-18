@@ -5,7 +5,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --prod",
+    "build": "ng build chat-widget --prod",
     "build:elements": "ng build elements --prod",
     "postbuild:elements": "node ./build-elements.js",
     "test": "ng test",
