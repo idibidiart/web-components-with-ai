@@ -34,7 +34,7 @@ The project is a standard Angular 6 project with a few additions:
 
 ```
 src/app/element.module.ts:  
-Module with the Angular components to be bootstrapped as Custom Elements. Imported by App Module so the Angular components and their framework dependencies may be used by the Angular app without redundant boilerplate (for Angular Elements and Angular app builds)
+Module with the Angular components bootstrapped as Custom Elements.
 
 src/main.element.ts:         
 bootstraps the Element Module (register Custom Elements)
