@@ -54,7 +54,7 @@ This Web Components PoC uses OpenAI's Sentiment Neuron, a Deep Learning, "Multip
 
 **based on the Stanford Sentiment Treebank: 91.8% accuracy versus the previous best of 90.2%.
 
-The predictive accuracy of the Sentiment Neuron can be seen below with the two overlapping normal distributions of how positive and negative reviews were scored. Values from 0 to 1 are were likely to be representative of positive sentiment, with maximum probability at 1. Values from 0 to -1 are more likely to be representative of negative sentiment with maximum probability at -1. Anything above 1.0 was accurately positive. Anything below -1.0 was accurately negative.    
+The predictive accuracy of the Sentiment Neuron can be seen below with the two overlapping normal distributions of how positive and negative reviews were scored. Values from 0 to 1 are are likely to be representative of positive sentiment, with maximum probability of that at 1. Values from 0 to -1 are more likely to be representative of negative sentiment with maximum probability of that at -1. Anything above 1.0 is always accurately positive. Anything below -1.0 is always accurately negative.    
 
 ![image](https://image.ibb.co/gPdMMJ/sst_binary_sentiment_unit_vis.png)
 
