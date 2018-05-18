@@ -34,7 +34,7 @@ The project is a standard Angular 6 project with a few additions:
 
 ```
 src/app/element.module.ts:  
-Module with the Angular components bootstrapped as Custom Elements.
+Module with the Angular components to be bootstrapped as Custom Elements.
 
 src/main.element.ts:         
 bootstraps the Element Module (register Custom Elements)
