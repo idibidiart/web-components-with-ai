@@ -54,11 +54,11 @@ This Web Components PoC uses OpenAI's Sentiment Neuron, a Deep Learning, "Multip
 
 **based on the Stanford Sentiment Treebank: 91.8% accuracy versus the previous best of 90.2%.
 
-The predictive accuracy of the Sentiment Neuron can be seen below with the two overlapping normal distributions of how positive and negative reviews were scored. Values from 0 to 1 are are likely to be representative of positive sentiment, with maximum probability of that at 1. Values from 0 to -1 are more likely to be representative of negative sentiment with maximum probability of that at -1. Anything above 1.0 is always accurately positive. Anything below -1.0 is always accurately negative.    
+The predictive accuracy of the Sentiment Neuron can be seen below with the two overlapping normal distributions of how reviews (with labeled sentiment) were classified. The overlapping region is most likely due to the fact that there is no sharp transition between negative and positive in the actual reviews, despite how they were labeled. 
 
 ![image](https://image.ibb.co/gPdMMJ/sst_binary_sentiment_unit_vis.png)
 
-The most interesting thing about this Deep Learning approach is that the network was trained to generate Reviews (unsupervised, using mLSTM RNN) by predicting the character and then turned into a sentiment classifer using labeled data and L1 Regularization. This hints at a basic relationship between sentence formation patterns and sentiment that the Sentiment Nueron (a single neuron in the network) is able to capture. This basic relationship should be of further interest to those who study formal theories of language. 
+The most interesting thing about this Deep Learning approach is that the network was trained to generate Reviews (unsupervised, using mLSTM RNN) by predicting the next character in the review string, but then it was turned into a sentiment classifer using labeled data and L1 Regularization. This hints at a basic relationship between sentence formation patterns and sentiment that the Sentiment Nueron (a single neuron in the network) is able to capture. This basic relationship should be of further interest to those who study formal theories of language. 
 
 Having said that, the Sentiment Neuron seems to be oblivious to sarcasm. This may mean that the supervised data set was lacking sufficient examples of sarcastic reviews, or it could mean that sarcasm is an elusive quality, one that escapes generalization and is very specific to external cultural context. Nevertheless, I believe that this is interesting work that is worth bringing the attention of a wider audience.
 
