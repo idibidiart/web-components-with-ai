@@ -70,11 +70,11 @@ The component can be developed as any other Angular component: run `ng serve` an
 
 ### UI
 
-% yarn install
+% npm install // in root project folder
 
-% yarn build <-- this builds an Angular 6 app
+% npm build <-- this builds an Angular 6 app
 
-% yarn build:elements <-- this builds Angular Elements (Web Components)
+% npm build:elements <-- this builds Angular Elements (Web Components)
 
 ### AI Model Server
 
@@ -84,7 +84,9 @@ Install pip
 
 Use pip3 in --user mode to install tdqm, tensorflow, sklearn and other dependencies
 
-To run: python3 server.py
+To run: python3 server.py // in sentiment folder
+
+You may replace the Sentiment Neuron server with a server running on port 5000 that takes a request of this http://localhost:5000/?text=${message} and returns a JSON of {output: "some text"}
 
 More details coming soon.
 
