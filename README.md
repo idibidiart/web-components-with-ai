@@ -86,7 +86,7 @@ Use pip3 in --user mode to install tdqm, tensorflow, sklearn and other dependenc
 
 To run: python3 server.py // in sentiment folder
 
-You may replace the Sentiment Neuron server with a server running on port 5000 that takes a request of this http://localhost:5000/?text=${message} and returns a JSON of {output: "some text"}
+You may replace the Sentiment Neuron server with a server running on port 5000 that takes a request of this http://localhost:5000/?text="some message" and returns a JSON of {output: "some response"}
 
 More details coming soon.
 
