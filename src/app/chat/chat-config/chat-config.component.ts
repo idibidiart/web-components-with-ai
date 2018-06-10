@@ -29,7 +29,7 @@ import { Component, EventEmitter, Input, Output, ViewEncapsulation } from '@angu
       border: 1px solid #333;
     }
   `],
-  encapsulation: ViewEncapsulation.Native
+  encapsulation: ViewEncapsulation.Emulated
 })
 export class ChatConfigComponent {
   @Input() public theme: string

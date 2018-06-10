@@ -10,7 +10,7 @@ const rand = max => Math.floor(Math.random() * max)
   templateUrl: './chat-widget.component.html',
   styleUrls: ['./chat-widget.component.css'],
   animations: [fadeInOut, fadeIn],
-  encapsulation: ViewEncapsulation.Native
+  encapsulation: ViewEncapsulation.Emulated
 })
 
 export class ChatWidgetComponent implements OnInit {
