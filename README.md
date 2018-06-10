@@ -96,18 +96,17 @@ This PoC extends the MIT licensed Angular Elements chat widget by [@beeman_nl](h
 
 This differs in the following ways:
 
-- Added Shadow DOM encapsulation (for styles and DOM selection)
 - NgModule imports were de-duplicated across the module dependency tree (Angular deduplicates dependencies but it is confusing to have duplicate imports at different levels of the dependency tree.) 
 - deployment of web components was modified so that multiple web components made with Angular Elements could be loaded without conflict or redundant dependencies. 
 - Some enhancements were made to the interaction between the Web Components 
 - Improvement to the site's responsive behavior. 
 - Finally, AI was added for a more interesting UX. 
 
-This PoC also extends OpenAI's Sentiment Neuron demo. It adds a RESTful server via Flask. 
+## Todo
 
-# References 
+- Investigate [ng cli plus](https://github.com/manfredsteyer/ngx-build-plus)
+- Keep an eye on https://github.com/angular/angular/issues/23636
 
-Coming soon
 
 
 
