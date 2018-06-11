@@ -40,7 +40,7 @@ src/main.element.ts:
 bootstraps the Element Module (register Custom Elements)
 
 build-elements.js:           
-script to bundle the Web Components and generate an HTML file with the polyfills (and ZoneJS)
+script to bundle the Web Components and generate an HTML file with the polyfills and ZoneJS
 
 src/index-elements.html:    
 See comments inside the file regarding deployment choices made
@@ -99,7 +99,7 @@ This PoC extends the MIT licensed Angular Elements chat widget by [@beeman_nl](h
 This differs in the following ways:
 
 - NgModule imports were de-duplicated across the module dependency tree (Angular deduplicates dependencies but it is confusing to have duplicate imports at different levels of the dependency tree.) 
-- deployment of web components was modified so that multiple web components made with Angular Elements could be loaded without conflict or redundant dependencies. 
+- deployment of web components was modified so that multiple web components made with Angular Elements could be loaded without conflict or redundant polyfills or conflicting ZoneJS. 
 - Some enhancements were made to the interaction between the Web Components 
 - Improvement to the site's responsive behavior. 
 - Finally, AI was added for a more interesting UX. 
