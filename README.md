@@ -62,10 +62,6 @@ The most interesting thing about this Deep Learning approach is that the network
 
 Having said that, the Sentiment Neuron seems to be oblivious to sarcasm. This may mean that the supervised data set was lacking sufficient examples of sarcastic reviews, or it could mean that sarcasm is an elusive quality, one that escapes generalization and is very specific to external cultural context. Nevertheless, I believe that this is interesting work that is worth bringing the attention of a wider audience.
 
-## Development
-
-The component can be developed as any other Angular component: run `ng serve` and navigate to `http://localhost:4200/`.
-
 ## Build
 
 ### UI
@@ -84,11 +80,17 @@ Install pip
 
 Use pip3 in --user mode to install tdqm, tensorflow, sklearn and other dependencies
 
-To run: python3 server.py // in sentiment folder
-
 You may replace the Sentiment Neuron server with a server running on port 5000 that takes a request of this http://localhost:5000/?text="some message" and returns a JSON of {output: "some response"}
 
-More details coming soon.
+## Run
+
+Server: run `python3 server.py` in ./sentiment folder
+
+Client: run `python -m SimpleHTTPServer 8080&` 
+
+Browse /dist/elements for Angular-Elements-based JS app
+
+Browse /dist/chat-widget for Angular 6 app
 
 ## Credits
 
@@ -104,7 +106,6 @@ This differs in the following ways:
 
 ## Todo
 
-- Investigate [ng cli plus](https://github.com/manfredsteyer/ngx-build-plus)
 - Keep an eye on https://github.com/angular/angular/issues/23636
 
 
